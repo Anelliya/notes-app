@@ -3,6 +3,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import notesTemplate from "./template/noteItem.hbs";
 import "./assets/icons/sprite.svg";
+import { v4 as uuidv4 } from "uuid";
 
 import notes from "./active_notes.json";
 //import noteItem from "./template/handlebars.hbs";
@@ -34,6 +35,16 @@ const resetData = {
 
 let noteData = { ...resetData };
 
+const findDates = (str) => {
+  const regexp = /(0?[1-9]|[12]\d|3[01]|[1-9])(?<sep>[\.\/\-])([0][1-9]|1[0-2]|[1-9])\k<sep>(202[1-9])/g;
+
+  const dates = str.match(regexp);
+  console.log(Array.isArray(dates));
+  dates ? (noteData.dates = dates.join(",")) : null;
+
+  console.log("dates in store", noteData.dates);
+};
+
 refs.btnSave.addEventListener("click", handleListUpdate);
 refs.nameInput.addEventListener("input", updateData);
 refs.contentInput.addEventListener("input", updateData);
@@ -51,19 +62,24 @@ function updateMarkup(data) {
 
 function clearForm(...refs) {
   refs.map((ref) => (ref.value ? (ref.value = "") : null));
-  console.log(refs);
 }
 
 function handleListUpdate(e) {
   noteData.created = new Date().toDateString();
+  noteData.id = uuidv4();
+  findDates(noteData.content);
+  console.log("noteData", noteData);
   notes.push(noteData);
   updateMarkup(notes);
+  console.log("notes", notes);
+
   noteData = { ...resetData };
   clearForm(refs.nameInput, refs.contentInput);
 }
 
 function updateData(e) {
   noteData[e.target.name] = e.target.value;
+
   noteData.name || noteData.content
     ? refs.btnSave.removeAttribute("disabled")
     : refs.btnSave.setAttribute("disabled", "true");
