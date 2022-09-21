@@ -10,7 +10,7 @@
   "deploy": "gh-pages -d dist",
   "test": "echo \"Error: no test specified\" && exit 1"
  },
- "author": "",
+ "author": "Elena Naydenova <najdenova.elena@gmail.com",
  "license": "ISC",
  "devDependencies": {
   "@babel/cli": "^7.18.10",
@@ -31,8 +31,8 @@
   "file-loader": "^6.0.0",
   "friendly-errors-webpack-plugin": "^1.7.0",
   "gh-pages": "^3.1.0",
-  "handlebars": "^4.7.6",
-  "handlebars-loader": "^1.7.1",
+  "handlebars": "^4.7.7",
+  "handlebars-loader": "^1.7.2",
   "html-loader": "^1.1.0",
   "html-webpack-plugin": "^4.3.0",
   "mini-css-extract-plugin": "^0.9.0",
@@ -50,6 +50,8 @@
  },
  "dependencies": {
   "bootstrap": "^4.6.2",
+  "bootstrap-icons": "^1.9.1",
+  "image-webpack-loader": "^8.1.0",
   "jquery": "^3.6.1",
   "popper.js": "^1.16.1",
   "toastr": "^2.1.4",

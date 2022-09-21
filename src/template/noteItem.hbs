@@ -1,0 +1,29 @@
+{{#each this}}
+<tr id={{id}}>
+    <td>{{name}} </td>
+    <td>{{created}}</td>
+    <td>{{category}}</td>
+    <td class="item-content ">{{content}}</td>
+    <td>{{dates}}</td>
+    <td>
+        <button type="button" class="btn btn-outline-secondary" id="edit-btn">
+            <svg width="16" height="16">
+                <use xlink:href="./assets/icons/sprite.svg#edit"></use>
+            </svg>
+        </button>
+
+        <button type="button" class="btn btn-outline-secondary" id="archive-btn">
+            <svg width="16" height="16">
+                <use xlink:href="./assets/icons/sprite.svg#archive"></use>
+            </svg>
+        </button>
+
+        <button type="button" class="btn btn-outline-secondary"id="delete-btn">
+            <svg width="16" height="16">
+                <use xlink:href="./assets/icons/sprite.svg#delete"></use>
+            </svg>
+        </button>
+
+    </td>
+</tr>
+{{/each}}

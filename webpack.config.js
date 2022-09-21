@@ -12,6 +12,8 @@ module.exports = (env) => {
     output: {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
+      assetModuleFilename: "[path][name][ext]",
+      publicPath: "",
     },
     module: {
       rules: [
@@ -29,6 +31,18 @@ module.exports = (env) => {
         {
           test: /\.s[ac]ss$/i,
           use: ["style-loader", "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.hbs$/,
+          use: [
+            {
+              loader: "handlebars-loader",
+            },
+          ],
+        },
+        {
+          test: /\.(png|svg|jpe?g|gif)$/i,
+          type: "asset/resource",
         },
       ],
     },
