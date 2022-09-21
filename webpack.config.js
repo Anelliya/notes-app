@@ -13,7 +13,8 @@ module.exports = (env) => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       assetModuleFilename: "[path][name][ext]",
-      publicPath: "",
+
+      publicPath: "auto",
     },
     module: {
       rules: [
