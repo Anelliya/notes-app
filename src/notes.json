@@ -17,6 +17,15 @@
     "dates": null,
     "status": "active"
   },
+    {
+    "id": "XWaQXcbk8",
+    "name": "Books for it",
+    "created":" Fr April 1 2021",  
+    "category": "Idea",
+    "content":"Can be power",
+    "date": null,
+    "status": "active"
+  },
   {
     "id": "XWaQXcbk2",
     "name": "New Feature",
@@ -32,6 +41,15 @@
     "created":" Fr May 07 2021",  
     "category": "Random Thought",
     "content":"Power doesn’t corrupt people; people corrupt power.",
+    "date": null,
+    "status": "archived"
+  },
+  {
+    "id": "XWaQXcbk4",
+    "name": "William Gaddis",
+    "created":" Fr May 15 2021",  
+    "category": "Task",
+    "content":"The lian startup.",
     "date": null,
     "status": "archived"
   }
