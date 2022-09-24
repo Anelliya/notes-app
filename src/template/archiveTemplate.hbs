@@ -1,0 +1,17 @@
+{{#each this}}
+
+<tr id={{id}}>
+    <td>{{name}} </td>
+    <td>{{created}}</td>
+    <td>{{category}}</td>
+    <td class="item-content ">{{content}}</td>
+    <td>{{dates}}</td>
+    <td id="btn">
+            <button type="button" class="btn btn-outline-secondary" id="go-to-active-btn" noteId={{id}}>
+            <svg width="16" height="16" id="go-to-active-btn" noteId={{id}}>
+                <use href="./assets/icons/sprite.svg#archive" id="go-to-active-btn" noteId={{id}}></use>
+            </svg>
+        </button>
+    </td>
+</tr>
+{{/each}}

@@ -1,20 +1,20 @@
-const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ProgressBarPlugin = require("progress-bar-webpack-plugin");
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
-module.exports = (env) => {
+module.exports = env => {
   return {
-    devtool: "eval-source-map",
+    devtool: 'eval-source-map',
     mode: env.mode,
-    context: path.resolve(__dirname, "src"),
-    entry: "./index.js",
+    context: path.resolve(__dirname, 'src'),
+    entry: './index.js',
     output: {
-      filename: "[name].bundle.js",
-      path: path.resolve(__dirname, "dist"),
-      assetModuleFilename: "[path][name][ext]",
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+      assetModuleFilename: '[path][name][ext]',
 
-      publicPath: "auto",
+      publicPath: 'auto',
     },
     module: {
       rules: [
@@ -22,50 +22,50 @@ module.exports = (env) => {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
           use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
         },
         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader"],
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.s[ac]ss$/i,
-          use: ["style-loader", "css-loader", "sass-loader"],
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
           test: /\.hbs$/,
           use: [
             {
-              loader: "handlebars-loader",
+              loader: 'handlebars-loader',
             },
           ],
         },
         {
           test: /\.(png|svg|jpe?g|gif)$/i,
-          type: "asset/resource",
+          type: 'asset/resource',
         },
       ],
     },
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: "./index.html",
+        template: './index.html',
       }),
       new ProgressBarPlugin(),
     ],
     devServer: {
       static: {
-        directory: path.join(__dirname, "dist"),
+        directory: path.join(__dirname, 'dist'),
       },
       historyApiFallback: true,
       compress: true,
       port: 3000,
       open: false,
       client: {
-        logging: "warn",
+        logging: 'warn',
       },
     },
-    stats: "error-only",
+    stats: 'error-only',
   };
 };

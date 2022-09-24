@@ -5,22 +5,22 @@
     <td>{{category}}</td>
     <td class="item-content ">{{content}}</td>
     <td>{{dates}}</td>
-    <td>
-        <button type="button" class="btn btn-outline-secondary" id="edit-btn">
-            <svg width="16" height="16">
-                <use xlink:href="./assets/icons/sprite.svg#edit"></use>
+    <td id="btn-list">
+        <button type="button" class="btn btn-outline-secondary" id="edit-btn" noteId={{id}} data-toggle="modal"  data-target="#edit-modal">
+            <svg width="16" height="16" id="edit-btn" noteId={{id}}>
+                <use href="./assets/icons/sprite.svg#edit" id="edit-btn" noteId={{id}}></use>
             </svg>
         </button>
 
-        <button type="button" class="btn btn-outline-secondary" id="archive-btn">
-            <svg width="16" height="16">
-                <use xlink:href="./assets/icons/sprite.svg#archive"></use>
+        <button type="button" class="btn btn-outline-secondary" id="go-to-arhive-btn" noteId={{id}}>
+            <svg width="16" height="16" id="go-to-arhive-btn" noteId={{id}}>
+                <use href="./assets/icons/sprite.svg#archive" id="go-to-arhive-btn" noteId={{id}}></use>
             </svg>
         </button>
 
-        <button type="button" class="btn btn-outline-secondary"id="delete-btn">
-            <svg width="16" height="16">
-                <use xlink:href="./assets/icons/sprite.svg#delete"></use>
+        <button type="button" class="btn btn-outline-secondary delete" id="delete-btn"  noteId={{id}}>
+            <svg width="16" height="16"  id="delete-btn"  noteId={{id}} >
+                <use href="./assets/icons/sprite.svg#delete" id="delete-btn"  noteId={{id}}></use>
             </svg>
         </button>
 

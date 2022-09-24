@@ -1,0 +1,36 @@
+
+
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" 
+            aria-hidden="true" id="{{id}}">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form action="submit" class="modal-form">
+                        <h2>Edit note</h2>
+                        <div class="input-group">
+                            <p>
+                                <label  id="name">{{name}}</label>
+                                <input type="text" class="form-control editName" aria-label="name" name="name"  id="editName">
+                            </p>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select class="form-control" id="changeCategory" name="category"  inputTarget="editCategory">
+                                <option>Task</option>
+                                <option>Random Thought</option>
+                                <option>Idea</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content</label>
+                            <textarea class="form-control" id="changeContent" rows="3" name="content"  inputTarget="editContent"></textarea>
+                        </div>
+                      
+                    </form>
+                 
+                    <div class="modal-footer">
+                        <button type="button" class="btn  btn-outline-dark" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn  btn-outline-dark save-btn" id="save-edit-btn" data-dismiss="modal" > Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>

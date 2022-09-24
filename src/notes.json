@@ -5,7 +5,8 @@
     "created":"Tue April 20 2021",
     "category": "Task",
     "content":"Tomatos, bread ",
-    "dates": null
+    "dates": null,
+    "status": "active"
   },
  {
     "id": "XWaQXcbk1",
@@ -13,7 +14,8 @@
     "created":"Mon April 27 2021",
     "category": "Random Thought",
     "content":"The evolution",
-    "dates": null
+    "dates": null,
+    "status": "active"
   },
   {
     "id": "XWaQXcbk2",
@@ -21,14 +23,16 @@
     "created":"Tue May 05 2021",
     "category": "Idea",
     "content":"Implement new function 3/5/2021, 5/5/2021",
-    "dates": "3/5/2021, 5/5/2021"
+    "dates": "3/5/2021, 5/5/2021",
+     "status": "active"
     
   },{
     "id": "XWaQXcbk3",
     "name": "William Gaddis",
     "created":" Fr May 07 2021",  
-    "category": "Quoita",
+    "category": "Random Thought",
     "content":"Power doesn’t corrupt people; people corrupt power.",
-    "date": null
+    "date": null,
+    "status": "archived"
   }
 ]
